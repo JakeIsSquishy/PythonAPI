@@ -9,6 +9,9 @@ from flask_restful import Resource, Api, reqparse
 # Create an instance of Flask
 app = Flask(__name__)
 
+# Create the API
+api = Api(app)
+
 def get_db():
 	db = getattr(g, '_database', None)
 	if db is None:
