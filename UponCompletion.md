@@ -7,7 +7,7 @@ thought I had locally opened while using the same machine.
 While this code compiles and the docker image successfully builds,
 I am unsure if the gets/posts/deletes are actually working.
 
-<b>#What I've learned:</b>
+<b>What I've learned:</b>
 The primary takeaway is that I now know more about API structure. 
 I have worked on making an API in C# for coursework, so it was 
 interesting getting a feel for how it worked in another language.
