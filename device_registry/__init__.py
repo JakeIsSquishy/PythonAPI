@@ -32,3 +32,15 @@ def index():
 
 		# Convert to HTML
 		return markdown.markdown(content)
+
+class DeviceList(Resource):
+	def get(self):
+		shelf = get_db()
+		keys = list(shelf.keys())
+
+		deivces = []
+
+		for key in keys:
+			devicees.append(shelf[key])
+
+		return {'message': 'Success', 'data': devices}
