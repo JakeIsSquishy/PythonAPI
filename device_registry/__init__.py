@@ -77,7 +77,7 @@ class Device(Resource):
 
 		# If the key does not exist in the data store, retun a 404 error
 		if not (identifier in shelf):
-			return 'message': 'Device not found', 'data': {}}, 404
+			return {'message': 'Device not found', 'data': {}}, 404
 		
 		del shelf[identifier]
 		return '', 204
