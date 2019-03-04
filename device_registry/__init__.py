@@ -60,7 +60,7 @@ class DeviceList(Resource):
 		shelf = get_db()
 		shelf[args['identifier']] = args
 
-		return {'message': 'Device registered' 'data': args}, 201
+		return {'message': 'Device registered', 'data': args}, 201
 
 class Device(Resource):
 	def get(self, identifier):
