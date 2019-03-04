@@ -1,11 +1,24 @@
 import markdown
 import os
+import shelve
 
 #Import the framework
-from flask import Flask
+from flask import Flask, g
 
 # Create an instance of Flask
 app = Flask(__name__)
+
+def get_db():
+	db = getattr(g, '_database', None)
+	if db is None:
+		db = g._database = shelve.open("devices.db")
+	return db
+
+@app.teardown_appcontext
+def teardown_dby(exception):
+	db = getattr(g, '_database', None)
+	if db is not None:
+		db.close()
 
 @app.route("/")
 def index():
