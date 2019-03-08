@@ -15,3 +15,8 @@ interesting getting a feel for how it worked in another language.
 I also learned the basics of using Docker. Since it is a tool that
 allows large amounts of flexibility in one's scalability, I am glad 
 that I have gained some experience with it.
+
+<b>Update:</b>
+I have found a way to access my api. I needed to call
+'docker-machine ls' to see the IP for the docker container and am 
+now able to see my README.md file on my browser.
